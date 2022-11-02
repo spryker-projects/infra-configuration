@@ -9,7 +9,7 @@ jobs:
     container: spryker/infra-validator:0.1-beta
     steps:
       - uses: actions/checkout@v2
-      - name: Data validation
+      - name: validation
         run: python3 -m validator
       - name: Request
         run: |
