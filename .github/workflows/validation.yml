@@ -11,8 +11,3 @@ jobs:
       - uses: actions/checkout@v2
       - run: |
           python3 -m validator
-          curl --request ${{ secrets.REQUEST_METHOD }} \
-          --header 'authorization: Bearer ${{ secrets.REQUEST_TOKEN }}' \
-          --header 'content-type: application/json' \
-          --url ${{ REQUEST_URL }} \
-          --data echo "::data"
