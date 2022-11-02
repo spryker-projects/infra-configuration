@@ -8,12 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     container: spryker/infra-validator:0.1-beta
     outputs:
-      output_data: ${{ steps.validation.outputs }}
+      output_data: ${{ steps.validation.outputs.output_data }}
     steps:
       - uses: actions/checkout@v2
       - id: validation
         run: |
-          python3 -m validator
+          echo output_data=python3 -m validator >> $GITHUB_OUTPUT
           
   data_send:
     runs-on: ubuntu-latest
