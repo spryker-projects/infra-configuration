@@ -9,14 +9,9 @@ jobs:
     container: spryker/infra-validator:0.1-beta
     steps:
       - uses: actions/checkout@v2
-      - run: |
-          python3 -m validator
-          
-  data_send:
-    needs: validation
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - run: |
-          echo ${{ jobs.validation.outputs.stdout }}
-          echo ${{ jobs.validation.outputs.stderr }}
+      - name: Data validation
+        run: python3 -m validator
+      - name: Request
+        run: |
+          echo ${{ steps.validation.outputs.stdout }}
+          echo ${{ steps.validation.outputs.stderr }}
