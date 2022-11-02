@@ -30,6 +30,7 @@ jobs:
            --header 'content-type: application/json' \
            --url '${{ secrets.REQUEST_URL }}' \
            --data '${{ needs.validation.outputs.output_data }}'`
+           echo ::set-output name=status_code::status_code
       - name: Status check
         if: steps.service_request.outputs.status_code != '200'
         run: exit 1
