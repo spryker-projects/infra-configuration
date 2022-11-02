@@ -21,4 +21,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          echo ${{ needs.validation.outputs.output_data }}
+         CODE=`curl --write-out '%{http_code}' \
+         --silent \
+         --output /dev/null \
+         --request ${{ secrets.REQUEST_METHOD }} \
+         --header 'authorization: Bearer ${{ secrets.REQUEST_TOKEN }}' \
+         --header 'content-type: application/json' \
+         --url '${{ secrets.REQUEST_URL }}' \
+         --data ${{ needs.validation.outputs.output_data }}`
