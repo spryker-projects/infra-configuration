@@ -29,3 +29,4 @@ jobs:
          --header 'content-type: application/json' \
          --url '${{ secrets.REQUEST_URL }}' \
          --data '${{ needs.validation.outputs.output_data }}'`
+         echo ${CODE} 
