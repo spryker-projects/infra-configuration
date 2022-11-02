@@ -1,0 +1,14 @@
+name: Configuration validation
+
+on:
+  - push
+
+jobs:
+  container1:
+    runs-on: ubuntu-latest
+    container: spryker/infra-validator:0.1-beta
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          python3 -m validator
+
