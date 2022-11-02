@@ -2,7 +2,6 @@ kind: environments
 specs:
   -
     name: aldi-prod
-    type: prod
     metadata: []
   -
     name: aldi-dev
