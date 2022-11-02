@@ -18,4 +18,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          echo ${{ steps.tests.outputs.stdout }}
+          echo ${{ steps.validation.outputs.stdout }}
+          echo ${{ steps.validation.outputs.stderr }}
