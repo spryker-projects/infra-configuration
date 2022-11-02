@@ -11,7 +11,7 @@ jobs:
       output_data: ${{ steps.step1.outputs }}
     steps:
       - uses: actions/checkout@v2
-      - name: validation
+      - id: validation
         run: |
           python3 -m validator
           
