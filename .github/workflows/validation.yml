@@ -4,7 +4,7 @@ on:
   - push
 
 jobs:
-  container1:
+  validation:
     runs-on: ubuntu-latest
     container: spryker/infra-validator:0.1-beta
     steps:
