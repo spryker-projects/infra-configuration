@@ -33,4 +33,4 @@ jobs:
            echo ::set-output name=status_code::status_code
       - name: Status check
         if: steps.service_request.outputs.status_code != '200'
-        run: exit 1
+        run: echo ${{ steps.service_request.outputs.status_code }}
