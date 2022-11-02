@@ -7,9 +7,10 @@ jobs:
   validation:
     runs-on: ubuntu-latest
     container: spryker/infra-validator:0.1-beta
-    #outputs:
-    #  output_data: ${{ steps.step1.outputs }}
+    outputs:
+      output_data: ${{ steps.step1.outputs }}
     steps:
+      - uses: actions/checkout@v2
       - id: validation
         run: |
           python3 -m validator
