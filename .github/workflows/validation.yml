@@ -12,3 +12,8 @@ jobs:
       - run: |
           python3 -m validator
           echo "::data"
+          curl --request ${{ secrets.REQUEST_METHOD }} \
+          --header 'authorization: Bearer ${{ secrets.REQUEST_TOKEN }}' \
+          --header 'content-type: application/json' \
+          --url ${{ REQUEST_URL }} \
+          --data echo "::data"
