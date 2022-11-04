@@ -3,7 +3,7 @@ specs:
   -
     name: aldi-prod
     type: prod
-    metadata: []
+    metadata: ['aldi-prod']
   -
     name: aldi-dev
     type: dev
