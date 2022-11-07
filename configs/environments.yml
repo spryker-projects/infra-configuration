@@ -3,7 +3,7 @@ specs:
   -
     name: test-prod
     type: prod
-    metadata: ['test-prod-new-kfjkdsf']
+    metadata: ['test-prod-new-kfjkdsf123123123']
   -
     name: test-dev
     type: dev
