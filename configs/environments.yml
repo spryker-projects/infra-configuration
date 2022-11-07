@@ -1,22 +1,22 @@
 kind: environments
 specs:
   -
-    name: aldi-prod
+    name: test-prod
     type: prod
-    metadata: ['aldi-prod']
+    metadata: ['test-prod']
   -
-    name: aldi-dev
+    name: test-dev
     type: dev
     metadata: []
   -
-    name: aldi-qa
+    name: test-qa
     type: dev
     metadata: []
   -
-    name: aldi-qa2
+    name: test-qa2
     type: dev-qa-1
     metadata: []
   -
-    name: aldi-qa2
+    name: test-qa2
     type: dev-qa-2
     metadata: []
