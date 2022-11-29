@@ -23,6 +23,13 @@ specs:
             developer:
                 - dev-qa-1
                 - dev-qa-2
+    -
+        username: guy4
+        email: guy4@spryker.com
+        roles:
+            developer:
+                - dev
+                - prod             
 
 
 #Input
