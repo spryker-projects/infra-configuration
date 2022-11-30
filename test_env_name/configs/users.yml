@@ -29,7 +29,14 @@ specs:
         roles:
             developer:
                 - dev
-                - prod             
+                - prod   
+    -
+        username: guy5
+        email: guy5@spryker.com
+        roles:
+            developer:
+                - dev
+                - prod            
 
 
 #Input
