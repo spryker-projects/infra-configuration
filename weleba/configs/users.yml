@@ -10,9 +10,9 @@ specs:
                 - prod
                 - dev-qa-1
     -
-      username: guy2
-          email: guy2@spryker.com
-          roles:
-              admin:
-                  - prod
-                  - dev
+        username: guy2
+        email: guy2@spryker.com
+        roles:
+            admin:
+                - prod
+                - dev
